@@ -28,6 +28,11 @@ function myFunction3() {
     console.log(array9); // ''
 
     var array7; // accessible outside!!!!!!!
+    // let array10;
+    // const array11 = [];
+
+    // array11 = '';
+    // array11[0] = 'I am a string';
 
     return 'innerString';
   }
@@ -42,14 +47,13 @@ console.log(array9); // undefined as it's declared but assignment is private to
 console.log(array8); // ['an array'] as var attaches to global object!!!!
 // array9[0] // breaks
 
-var array = [1, 2, 3, 4];
-
-for (var index = 0; index < array.length; index++) {
-  var element = array[index];
-
-  element = 0;
-}
-
-// while (condition) {
+// var index = 0;
+// while (index < array.length) {
 //  doSomething()
+
+// index++
 // }
+
+// modern declaration
+// let
+// const
