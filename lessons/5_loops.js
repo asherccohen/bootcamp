@@ -1,5 +1,6 @@
 // Loops
 
+// MUTABLE METHODS
 var array = [1, 2, 3, 4];
 
 var tempArray = [];
@@ -26,6 +27,34 @@ console.log('tempArray', [3, 6, 9, 12]);
 // for (const iterator of object) {
 
 // }
+
+//Sort
+var array = [1, 2, 3, 4];
+
+const unstableSortedArray = array.sort();
+
+const sortedArray = array.sort((a, b) => {
+  if (a - b === 0) {
+    return true;
+  }
+
+  return false;
+});
+
+// add element to array
+array.push('new element'); // immutable counterpart const newArray = array.concat('new element)
+// pop take first element of the array
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+animals.slice(2);
+// slice take a part of it
+
+// LOOK INTO array.prototype methods and find the mutable/immutable ones
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+// IMMUTABLE METHODS
+// add element
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+const newAnimals = animals.concat('cat'); // ['ant', 'bison', 'camel', 'duck', 'elephant', 'cat]
 
 // Transformation -> map
 const multiply = (element) => {
@@ -92,30 +121,6 @@ const countedNames = names.reduce((allNames, name) => {
 // countedNames is:
 // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
 // countedNames['Alice'];
-
-// Mutable
-//Sort
-var array = [1, 2, 3, 4];
-
-const unstableSortedArray = array.sort();
-
-const sortedArray = array.sort((a, b) => {
-  if (a - b === 0) {
-    return true;
-  }
-
-  return false;
-});
-
-// push
-array.push('new element'); // immutable counterpart const newArray = array.concat('new element)
-// pop take first element of the array
-const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
-animals.slice(2);
-// slice take a part of it
-
-// LOOK INTO array.prototype methods and find the mutable/immutable ones
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 // Flat/flatMap
 // [[1, 2], [3,4]]
