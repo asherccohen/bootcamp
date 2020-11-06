@@ -68,10 +68,10 @@ const App = ({ link }: Props) => {
         >
           CLICK
         </button> */}
-        {/* Show Input
+        Show Input
         <button onClick={() => setVisible((visible: boolean) => !visible)}>
           TOGGLE
-        </button> */}
+        </button>
         {/* {visible === true && <Form />} */}
         {/* {visible && <Form />} */}
         {visible === true ? <Form setVisible={setVisible} /> : null}
@@ -83,7 +83,17 @@ const App = ({ link }: Props) => {
             height: '500px',
           }}
         >
-          <Chart />
+          <Chart
+            labels={{
+              red: 'Red',
+              blue: 'Blue',
+              yellow: 'Yellow',
+              green: 'Green',
+              purple: 'Purple',
+              orange: 'Orange',
+            }}
+            dataValues={[12, 19, 3, 5, 2, 3]}
+          />
         </div>
       </header>
     </div>
