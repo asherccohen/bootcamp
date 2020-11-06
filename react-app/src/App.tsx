@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Form from './Form';
+import Chart from './Chart/Chart';
 
 // state is data at a given time
 // views are a function of state
@@ -41,7 +42,7 @@ const App = ({ link }: Props) => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           {/* Edit <code>src/App.tsx</code> and save to reload. */}
           {`Hello world ${name}, count: ${count}`}
@@ -57,23 +58,43 @@ const App = ({ link }: Props) => {
         {/* <button onClick={() => count + 1}>CLICK</button> */}
         {/* <button onClick={() => setState(count + 1)}>CLICK</button> */}
         {/* <button onClick={() => setCount((count) => count + 1)}>CLICK</button> */}
-        <button
+        {/* <button
           onClick={() =>
-            setState((state) => ({
+            setState((state: any) => ({
               ...state,
               name: 'jason',
             }))
           }
         >
           CLICK
-        </button>
+        </button> */}
         Show Input
-        <button onClick={() => setVisible((visible) => !visible)}>
+        <button onClick={() => setVisible((visible: boolean) => !visible)}>
           TOGGLE
         </button>
         {/* {visible === true && <Form />} */}
         {/* {visible && <Form />} */}
         {visible === true ? <Form setVisible={setVisible} /> : null}
+        <div
+          style={{
+            margin: '50px 0',
+            backgroundColor: 'white',
+            width: '1000px',
+            height: '500px',
+          }}
+        >
+          <Chart
+            labels={{
+              red: 'Red',
+              blue: 'Blue',
+              yellow: 'Yellow',
+              green: 'Green',
+              purple: 'Purple',
+              orange: 'Orange',
+            }}
+            dataValues={[12, 19, 3, 5, 2, 3]}
+          />
+        </div>
       </header>
     </div>
   );

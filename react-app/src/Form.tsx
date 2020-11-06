@@ -31,12 +31,12 @@ const Form = ({ setVisible }: Props) => {
 
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         {inputs.map((element) => {
-          return <input placeholder={element} />;
+          return <input key={element} placeholder={element} />;
         })}
       </div>
-      {Object.keys(obj).map((element) => {
+      {/* {Object.keys(obj).map((element) => {
         return <input placeholder={element} />;
-      })}
+      })} */}
     </form>
   );
 };
